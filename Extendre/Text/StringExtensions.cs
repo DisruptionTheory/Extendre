@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Extendre.Collections;
 
 /// <summary>
 /// Extension methods for strings.
@@ -34,12 +35,12 @@ namespace Extendre.Text {
                 valueList.Add(new Tuple<int, char>(randomizer.Next(), current));
             }
             valueList.Sort((a, b) => a.Item1.CompareTo(b.Item1));
-            string randomized = "";
+            StringBuilder randomized = new StringBuilder();
             foreach (Tuple<int, char> current in valueList)
             {
-                randomized += current.Item2;
+                randomized.Append(current.Item2);
             }
-            return randomized;
+            return randomized.ToString();
         }
 
         /// <summary>
@@ -58,6 +59,17 @@ namespace Extendre.Text {
                 sorted += current;
             }
             return sorted;
+        }
+
+        /// <summary>
+        /// Reverse the given string.
+        /// </summary>
+        /// <param name="text">The string to reverse.</param>
+        /// <returns>The reversed string.</returns>
+        public static string Reverse(this string text)
+        {
+            char[] reversed = text.ToCharArray().Reverse();
+            return reversed.Flatten();
         }
 
     }

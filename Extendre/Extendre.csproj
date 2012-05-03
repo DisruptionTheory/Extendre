@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Int16Extensions.cs" />
-    <Compile Include="Int32Extensions.cs" />
-    <Compile Include="Int64Extensions.cs" />
-    <Compile Include="StringExtensions.cs" />
+    <Compile Include="Collections\ArrayExtensions.cs" />
+    <Compile Include="Collections\CharArrayExtensions.cs" />
+    <Compile Include="Numerics\Int16Extensions.cs" />
+    <Compile Include="Numerics\Int32Extensions.cs" />
+    <Compile Include="Numerics\Int64Extensions.cs" />
+    <Compile Include="Text\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
