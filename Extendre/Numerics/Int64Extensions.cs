@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Numerics;
 
+/// <summary>
+/// Provides extension methods for Numeric data types.
+/// </summary>
 namespace Extendre.Numerics
 {
     /// <summary>

@@ -4,8 +4,12 @@ using System.Linq;
 using System.Text;
 using Extendre.Numerics;
 
+
 namespace Extendre.Collections
 {
+    /// <summary>
+    /// Provides extension methods for Arrays.
+    /// </summary>
     public static class ArrayExtensions
     {
         /// <summary>
@@ -51,7 +55,7 @@ namespace Extendre.Collections
         }
 
         /// <summary>
-        /// Sets each element in the array to the default value for the type;
+        /// Sets each element in the array to the default constructed value for the type.
         /// </summary>
         /// <typeparam name="T">The type of the array.</typeparam>
         /// <param name="array">The array to clear.</param>

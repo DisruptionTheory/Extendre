@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="Collections\ArrayExtensions.cs" />
     <Compile Include="Collections\CharArrayExtensions.cs" />
+    <Compile Include="Numerics\DecimalExtensions.cs" />
+    <Compile Include="Numerics\DoubleExtensions.cs" />
+    <Compile Include="Numerics\FloatExtensions.cs" />
     <Compile Include="Numerics\Int16Extensions.cs" />
     <Compile Include="Numerics\Int32Extensions.cs" />
     <Compile Include="Numerics\Int64Extensions.cs" />
