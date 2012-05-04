@@ -49,6 +49,7 @@
     <Compile Include="Numerics\Int16Extensions.cs" />
     <Compile Include="Numerics\Int32Extensions.cs" />
     <Compile Include="Numerics\Int64Extensions.cs" />
+    <Compile Include="ObjectExtensions.cs" />
     <Compile Include="Text\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -8,7 +8,7 @@ namespace Extendre.Numerics
     /// <summary>
     /// Provides extension methods for 128 bit floating point numbers.
     /// </summary>
-    class DecimalExtensions
+    public static class DecimalExtensions
     {
         /// <summary>
         /// Determine whether a number is within a particular range.
