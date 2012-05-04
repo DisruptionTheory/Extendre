@@ -9,7 +9,6 @@ using Extendre.Collections;
 namespace ExtendreTest {
     class Program {
         static void Main(string[] args) {
-            Console.ReadLine();
         }
     }
 }

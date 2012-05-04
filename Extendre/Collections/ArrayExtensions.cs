@@ -160,5 +160,18 @@ namespace Extendre.Collections
             }
             return newArray;
         }
+
+        /// <summary>
+        /// Get a random value from the array.
+        /// </summary>
+        /// <typeparam name="T">The type of the array.</typeparam>
+        /// <param name="array">The array to get the value from.</param>
+        /// <returns>A random value pulled from the array.</returns>
+        public static T GetRandom<T>(this T[] array)
+        {
+            Random randomizer = new Random();
+            int randomNum = randomizer.Next(array.Length + 1);
+            return array[randomNum];
+        }
     }
 }
