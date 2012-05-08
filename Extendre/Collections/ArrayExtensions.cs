@@ -21,7 +21,7 @@ namespace Extendre.Collections
         public static T[] Reverse<T>(this T[] array){
             if (array.Length.IsEven())
             {
-                for (int i = array.GetLowerBound(0); i < array.GetUpperBound(0) / 2; i++)
+                for (int i = 0; i < array.Length / 2; i++)
                 {
                     array = array.SwapElements(i, array.Length - i - 1);
                 }
@@ -29,7 +29,7 @@ namespace Extendre.Collections
             }
             else
             {
-                for (int i = array.GetLowerBound(0); i < (array.GetUpperBound(0) - 1) / 2; i++)
+                for (int i = 0; i < (array.Length - 1) / 2; i++)
                 {
                     array = array.SwapElements(i, array.Length - i - 1);
                 }
@@ -62,7 +62,7 @@ namespace Extendre.Collections
         /// <returns>The cleared array.</returns>
         public static T[] Clear<T>(this T[] array)
         {
-            for (int i = array.GetLowerBound(0); i <= array.GetUpperBound(0); i++)
+            for (int i = 0; i <= array.Length; i++)
             {
                 array[i] = default(T);
             }
@@ -79,7 +79,7 @@ namespace Extendre.Collections
         public static T[] Remove<T>(this T[] array, T item)
         {
             List<T> newCollection = new List<T>();
-            for (int i = array.GetLowerBound(0); i <= array.GetUpperBound(0); i++)
+            for (int i = 0; i <= array.Length; i++)
             {
                 if(!array[i].Equals(item))
                     newCollection.Add(array[i]);
@@ -97,7 +97,7 @@ namespace Extendre.Collections
         public static T[] RemoveOnce<T>(this T[] array, T item)
         {
             List<T> newCollection = new List<T>();
-            for (int i = array.GetLowerBound(0); i <= array.GetUpperBound(0); i++)
+            for (int i = 0; i <= array.Length; i++)
             {
                 if (!array[i].Equals(item))
                 {
@@ -174,7 +174,7 @@ namespace Extendre.Collections
         public static T GetRandom<T>(this T[] array)
         {
             Random randomizer = new Random();
-            int randomNum = randomizer.Next(array.Length + 1);
+            int randomNum = randomizer.Next(array.Length);
             return array[randomNum];
         }
     }
