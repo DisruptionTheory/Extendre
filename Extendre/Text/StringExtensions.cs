@@ -66,5 +66,30 @@ public static class StringExtensions {
         return reversed.Flatten();
     }
 
+    /// <summary>
+    /// Remove a specefied number of characters from the end of the string.
+    /// </summary>
+    /// <param name="text">The string to remove characters from.</param>
+    /// <param name="count">The number of characters to remove.</param>
+    /// <returns>A string with the specefied number of characters removed.</returns>
+    public static string TrimEndBy(this string text, int count)
+    {
+        if (count > text.Length) throw new ArgumentOutOfRangeException("count");
+        return text.Substring(0, text.Length - count);
+    }
+
+    /// <summary>
+    /// Remove a specefied number of characters from the beginning of the string.
+    /// </summary>
+    /// <param name="text">The string to remove character from.</param>
+    /// <param name="count">The number of characters to remove.</param>
+    /// <returns>A string with the specefied number of characters removed.</returns>
+    public static string TrimStartBy(this string text, int count)
+    {
+        if (count > text.Length || count < 0) throw new ArgumentOutOfRangeException("count");
+        if (count == 0) return text;
+        return text.Substring(count - 1, text.Length - count);
+    }
+
 }
 
