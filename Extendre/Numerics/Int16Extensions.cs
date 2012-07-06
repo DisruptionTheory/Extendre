@@ -106,5 +106,36 @@ public static class Int16Extensions
         return value % 2 != 0;
     }
 
+    /// <summary>
+    /// Get the square root of the given number.
+    /// </summary>
+    /// <param name="value">The given number.</param>
+    /// <returns>The square root of the given number.</returns>
+    public static Double SqaureRoot(this Int16 value)
+    {
+        return Math.Sqrt(value);
+    }
+
+    /// <summary>
+    /// Get the absolute value of the given number.
+    /// </summary>
+    /// <param name="value">The given number.</param>
+    /// <returns>The absolute value of the given number.</returns>
+    public static Int16 AbsoluteValue(this Int16 value)
+    {
+        return Math.Abs(value);
+    }
+
+    /// <summary>
+    /// Get the given number raised to a given power.
+    /// </summary>
+    /// <param name="value">The given number.</param>
+    /// <param name="exponent">The given power.</param>
+    /// <returns>The given number raised to a given power.</returns>
+    public static Double Pow(this Int16 value, double exponent)
+    {
+        return Math.Pow(value, exponent);
+    }
+
 }
 

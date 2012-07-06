@@ -20,5 +20,36 @@ public static class DoubleExtensions
     {
         return (num >= low && num <= high) ? true : false;
     }
+
+    /// <summary>
+    /// Get the square root of the given number.
+    /// </summary>
+    /// <param name="value">The given number.</param>
+    /// <returns>The square root of the given number.</returns>
+    public static Double SqaureRoot(this Double value)
+    {
+        return Math.Sqrt(value);
+    }
+
+    /// <summary>
+    /// Get the absolute value of the given number.
+    /// </summary>
+    /// <param name="value">The given number.</param>
+    /// <returns>The absolute value of the given number.</returns>
+    public static Double AbsoluteValue(this Double value)
+    {
+        return Math.Abs(value);
+    }
+
+    /// <summary>
+    /// Get the given number raised to a given power.
+    /// </summary>
+    /// <param name="value">The given number.</param>
+    /// <param name="exponent">The given power.</param>
+    /// <returns>The given number raised to a given power.</returns>
+    public static Double Pow(this Double value, Double exponent)
+    {
+        return Math.Pow(value, exponent);
+    }
 }
 

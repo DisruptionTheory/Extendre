@@ -15,7 +15,7 @@ public static class DecimalExtensions
     /// <param name="low">The low end of the range.</param>
     /// <param name="high">The high end of the range.</param>
     /// <returns>True if the number is in the range, False otherwise.</returns>
-    public static bool InRange(this decimal num, decimal low, decimal high)
+    public static bool InRange(this Decimal num, Decimal low, Decimal high)
     {
         return (num >= low && num <= high) ? true : false;
     }
